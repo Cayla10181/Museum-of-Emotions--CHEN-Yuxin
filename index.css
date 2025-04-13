@@ -1,0 +1,280 @@
+/* 首页布局样式 */
+.hero {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+}
+
+.slider {
+	height: 100%;
+	width: 300%;
+	display: flex;
+}
+
+.slide {
+	width: 33.333%;
+	height: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide:nth-child(1) {
+	background-image: url('../img/hero.png');
+}
+
+.slide:nth-child(2) {
+	background-image: url('../img/hero2.png');
+}
+
+.slide:nth-child(3) {
+	background-image: url('../img/hero3.png');
+}
+
+.slide-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+}
+
+.slider-nav {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.slider-nav label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.slide-radio {
+	display: none;
+}
+
+#slide1:checked~.slider {
+	transform: translateX(0);
+}
+
+#slide2:checked~.slider {
+	transform: translateX(-33.333%);
+}
+
+#slide3:checked~.slider {
+	transform: translateX(-66.666%);
+}
+
+#slide1:checked~.slider-nav .nav-1,
+#slide2:checked~.slider-nav .nav-2,
+#slide3:checked~.slider-nav .nav-3 {
+	background: white;
+}
+
+/* 特色区域样式 */
+.features {
+	padding: 3rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.feature-card {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.feature-image {
+	width: 100%;
+	height: 180px;
+	margin-bottom: 1.5rem;
+}
+
+.feature-image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.feature-card h2 {
+	color: #7c9885;
+	margin-bottom: 1rem;
+}
+
+.feature-card p {
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+}
+
+.intro-section {
+	background-color: #f9f9f9;
+	padding: 3rem 2rem;
+}
+
+.intro-content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.intro-content h2 {
+	text-align: center;
+	color: #7c9885;
+	margin-bottom: 2rem;
+}
+
+.intro-flex {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+}
+
+.intro-image {
+	flex: 1;
+	height: 400px;
+}
+
+.intro-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.intro-text {
+	flex: 1;
+	text-align: left;
+}
+
+.intro-text h3 {
+	color: #7c9885;
+	margin: 1.5rem 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+.intro-text p {
+	margin-bottom: 1rem;
+	line-height: 1.6;
+	color: #333;
+}
+
+.btn:hover {
+	background-color: #b5838d;
+}
+
+.testimonial-section {
+	text-align: center;
+	padding: 3rem 2rem;
+	background-color: rgba(124, 152, 133, 0.1);
+	border-radius: 8px;
+	margin: 3rem auto;
+	max-width: 1200px;
+}
+
+.testimonial-section h2 {
+	font-size: 2em;
+	margin-bottom: 2rem;
+	color: #7c9885;
+}
+
+.testimonial-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+blockquote {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 8px;
+	width: 45%;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote p {
+	font-style: italic;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+	text-indent: 2em;
+}
+
+.contact-section {
+	padding: 3rem 2rem;
+	max-width: 800px;
+	margin: 3rem auto;
+	text-align: center;
+}
+
+.contact-section h2 {
+	color: #7c9885;
+	margin-bottom: 2rem;
+	font-size: 2em;
+}
+
+.contact-form {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.form-group textarea {
+	height: 150px;
+	resize: vertical;
+}
+
+.submit-btn {
+	background-color: #7c9885;
+	color: white;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.submit-btn:hover {
+	background-color: #b5838d;
+}
